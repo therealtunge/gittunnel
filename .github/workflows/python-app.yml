@@ -35,7 +35,7 @@ jobs:
       env:
           API_TOKEN_GITHUB: ${{ secrets.TOKEN }}
       with:
-        source-directory: .
+        source-directory: out
         destination-github-username: 'therealtunge'
         destination-repository-name: 'gittunnel'
         target-branch: 'main'
