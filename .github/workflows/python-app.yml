@@ -33,4 +33,5 @@ jobs:
     - name: push
       uses: justjavac/action-gh-push@v1
       with:
+        token: $TOKEN
         repository: therealtunge/gittunnel
