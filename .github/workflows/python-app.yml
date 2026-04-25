@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -30,12 +30,5 @@ jobs:
     - name: tunnel
       run: |
         python tunnel.py
-    - name: Push directory to another repository directory
-      uses: XenonMolecule/github-action-push-to-another-repository@0.1.0
-      env:
-          API_TOKEN_GITHUB: ${{ secrets.TOKEN }}
-      with:
-        source-directory: .
-        destination-github-username: 'therealtunge'
-        destination-repository-name: 'gittunnel'
-        target-branch: 'main'
+    - name: push
+      uses: stefanzweifel/git-auto-commit-action@v7
