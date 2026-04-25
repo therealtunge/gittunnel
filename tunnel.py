@@ -11,12 +11,12 @@ def handle_inbound_http(inbound): # currently, http inbounds are one send and on
 		case "get":
 			print(f"got http get for {inbound[1]}")
 			r = requests.get(inbound[1])
-			o = ("http",r.status_code,r.text)
+			o = ["http",r.status_code,r.text]
 			print(f"got outbound: {r.status_code},{r.text[:100]}...")
-			return (True, o)
+			return [True, o]
 		case _:
 			print(f"invalid http request: {inbound[0]}")
-			return (False)
+			return [False]
 
 def main():
 	inbound_raw = ""
