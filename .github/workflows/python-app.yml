@@ -31,6 +31,10 @@ jobs:
       run: |
         python tunnel.py
     - name: push
-      uses: actions-js/push@master
+      uses: appleboy/git-push-action@v1
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+          remote: git@github.com:therealtunge/gittunnel.git
+          ssh_key: ${{ secrets.DEPLOY_KEY }}
+          branch: main
+          commit: true
+          commit_message: "chore: update version file"
