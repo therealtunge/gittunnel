@@ -32,8 +32,10 @@ jobs:
         python tunnel.py
     - name: Push directory to another repository directory
       uses: XenonMolecule/github-action-push-to-another-repository@0.1.0
+      env:
+          API_TOKEN_GITHUB: ${{ secrets.TOKEN }}
       with:
-        source_directory: .
+        source-directory: .
         destination-github-username: 'therealtunge'
         destination-repository-name: 'gittunnel'
         target-branch: 'main'
