@@ -30,11 +30,10 @@ jobs:
     - name: tunnel
       run: |
         python tunnel.py
-    - name: push
-      uses: appleboy/git-push-action@v1
+    - name: Push directory to another repository directory
+      uses: XenonMolecule/github-action-push-to-another-repository@0.1.0
       with:
-          remote: git@github.com:therealtunge/gittunnel.git
-          ssh_key: ${{ secrets.DEPLOY_KEY }}
-          branch: main
-          commit: true
-          commit_message: "chore: update version file"
+        source_directory: .
+        destination-github-username: 'therealtunge'
+        destination-repository-name: 'gittunnel'
+        target-branch: 'main'
