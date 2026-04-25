@@ -36,5 +36,5 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.TOKEN }}
       with:
         repository: therealtunge/gittunnel
-        files:
-          | outbound
+        files: |
+          outbound
