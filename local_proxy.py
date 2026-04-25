@@ -6,7 +6,7 @@ import subprocess
 import os
 import time
 try:
-	listening_port = 10024
+	listening_port = 10025
 except KeyboardInterrupt:
 	print("\n[*] User has requested an interrupt")
 	print("[*] Application Exiting.....")
@@ -78,6 +78,7 @@ def proxy_server(webserver, port, conn, addr, data):
 	finally:
 		with open("inbound", "a+") as inbound_fd:
 			inbound_fd.write(payload)
+		
 		subprocess.run(["git", "add", "."])
 		subprocess.run(["git", "commit", "-m", "send outbound"])
 		subprocess.run(["git", "push"])
