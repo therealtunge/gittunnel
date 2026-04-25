@@ -32,7 +32,7 @@ def main():
 			if (not o[0]):
 				return 1
 
-			with open("outbound", "wb") as outbound_fd:
+			with open("out/outbound", "wb") as outbound_fd:
 				outbound_fd.write(bytes(o[1][2], "utf-8"))
 			
 			return 0

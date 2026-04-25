@@ -1,8 +1,8 @@
 import os
 
 try:
-	os.remove("outbound")
+	os.remove("out/outbound")
 except Exception:
 	pass
 finally:
-	open("outbound", "a").close()
+	open("out/outbound", "a").close()
