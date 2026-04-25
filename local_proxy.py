@@ -5,7 +5,7 @@ from _thread import *
 import subprocess
 import os
 try:
-	listening_port = 10017
+	listening_port = 10018
 except KeyboardInterrupt:
 	print("\n[*] User has requested an interrupt")
 	print("[*] Application Exiting.....")
@@ -42,7 +42,6 @@ def start():	#Main Program
 			sys.exit(1)
 
 def conn_string(conn, data, addr):
-	print(data)
 	first_line = data.split(b'\n')[0]
 
 	url = first_line.split()[1]
@@ -66,7 +65,6 @@ def conn_string(conn, data, addr):
 	else:
 		port = int((temp[(port_pos+1):])[:webserver_pos-port_pos-1])
 		webserver = temp[:port_pos]
-	print(data)
 	proxy_server(webserver, port, conn, addr, data)
 
 def proxy_server(webserver, port, conn, addr, data):
