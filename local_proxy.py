@@ -4,8 +4,9 @@ import sys
 from _thread import *
 import subprocess
 import os
+import time
 try:
-	listening_port = 10023
+	listening_port = 10024
 except KeyboardInterrupt:
 	print("\n[*] User has requested an interrupt")
 	print("[*] Application Exiting.....")
@@ -80,6 +81,8 @@ def proxy_server(webserver, port, conn, addr, data):
 		subprocess.run(["git", "add", "."])
 		subprocess.run(["git", "commit", "-m", "send outbound"])
 		subprocess.run(["git", "push"])
+		time.sleep(5)
+		subprocess.run(["git", "pull"])
 
 
 if __name__== "__main__":
