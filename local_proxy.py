@@ -69,9 +69,8 @@ def conn_string(conn, data, addr):
 	print(data)
 	proxy_server(webserver, port, conn, addr, data)
 
-def proxy_server(webserver, port, conn, addr, _data):
-	data = str(_data)
-	payload = f"http,{data.split()[0].lower()},{webserver}"
+def proxy_server(webserver, port, conn, addr, data):
+	payload = f"http,{str(data.split()[0]).lower()},{webserver}"
 	try:
 		os.remove("inbound")
 	except Exception:
