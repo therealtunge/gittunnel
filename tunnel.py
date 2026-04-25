@@ -38,6 +38,5 @@ def main():
 			return 0
 		case _:
 			print("got invalid inbound")
-			sys.exit(1)
-
-sys.exit(main())
+			sys.exit(0)
+main()
