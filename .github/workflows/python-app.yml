@@ -32,6 +32,9 @@ jobs:
         python tunnel.py
     - name: push
       uses: justjavac/action-gh-push@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
       with:
-        token: $TOKEN
         repository: therealtunge/gittunnel
+        files:
+          | outbound
