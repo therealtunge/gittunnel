@@ -5,7 +5,7 @@ from _thread import *
 import subprocess
 import os
 try:
-	listening_port = 10015
+	listening_port = 10016
 except KeyboardInterrupt:
 	print("\n[*] User has requested an interrupt")
 	print("[*] Application Exiting.....")
@@ -70,8 +70,8 @@ def conn_string(conn, data, addr):
 	proxy_server(webserver, port, conn, addr, data)
 
 def proxy_server(webserver, port, conn, addr, data):
-	payload = f"http,{str(data.split()[0]).lower()},{webserver}"
-	print(payload)
+	payload = f"http,{data[0]}"
+	print(data, payload)
 	try:
 		os.remove("inbound")
 	except Exception:
