@@ -26,6 +26,7 @@ jobs:
     - name: tunnel
       run: |
         python tunnel.py
-        git add .
-        git commit -m "hello"
-        git push
+    - name: push
+      uses: justjavac/action-gh-push@v1
+      with:
+        repository: therealtunge/gittunnel
