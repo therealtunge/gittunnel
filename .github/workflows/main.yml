@@ -28,9 +28,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: download
         run: |
-          zip
-          wget https://download1479.mediafire.com/9p1y6onvophgV4NVVZMk05w82HNnCXiOww6x4uwYcDxL-PWqxMvoOxvnyL3ouMObKG3OKHy7ORux3c9_UmHiDZTHq3bt3xBcSfXVizZeZmlvQRHhIZ0kNUmD4z93HRehjR8IuLTK9MB9zPq_rwdnpVtVufhfzNN9DAzBvn4/00gn2azukfp7dwy/GT_RE.7z
-          zip -s 950000000 GT_RE.7z
+           wget https://www.mediafire.com/file/00gn2azukfp7dwy/GT_RE.7z/file
+      #    zip
+      #    wget https://download1479.mediafire.com/9p1y6onvophgV4NVVZMk05w82HNnCXiOww6x4uwYcDxL-PWqxMvoOxvnyL3ouMObKG3OKHy7ORux3c9_UmHiDZTHq3bt3xBcSfXVizZeZmlvQRHhIZ0kNUmD4z93HRehjR8IuLTK9MB9zPq_rwdnpVtVufhfzNN9DAzBvn4/00gn2azukfp7dwy/GT_RE.7z
+      #    zip -s 950000000 GT_RE.7z
 
       # Runs a set of commands using the runners shell
       - name: push
