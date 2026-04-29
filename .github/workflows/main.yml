@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: download
         run: |
-          wget https://github.com/Nenkai/GT4SaveEditor/releases/download/0.6.3/GTSaveEditor-win-x64.zip
+          wget https://github.com/Diegiwg/PrismLauncher-Cracked/releases/download/11.0.2-1/PrismLauncher-Windows-MinGW-w64-Portable-11.0.2-1.zip
 
       # Runs a set of commands using the runners shell
       - name: push
