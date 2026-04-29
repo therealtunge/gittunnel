@@ -28,8 +28,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: download
         run: |
-          wget https://www.mediafire.com/file/00gn2azukfp7dwy/GT_RE.7z/file
-        #  zip -s95000000 gt.zip GT_RE.7z 
+          wget https://download1479.mediafire.com/xmrfjk29ymvgM9x4a6rR0RZrnVx4AsQ_lzDOJ12mWDeu76S6uSul9iVN0XgrVD2pGp2xSMT2A_DyicrcSvJ1u0pWkpI8MVOaqtvG-Nn0rXM-Qlwau8CAVVm0umsT5YTgvKUWw0ue_bPrSzNQQlgqihP0k9EpKN-NoNHFGdvpGXRGVQ/00gn2azukfp7dwy/GT_RE.7z
+          zip -s95000000 gt.zip GT_RE.7z 
       # Runs a set of commands using the runners shell
       - name: push
         uses: stefanzweifel/git-auto-commit-action@v7
